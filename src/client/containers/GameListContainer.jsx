@@ -51,7 +51,7 @@ class GameListContainer extends Component {
   componentDidMount() {
     const { getGameList, resetGameSelection, resetGameMenu, resetLeaderboardLoadingContent } = this.props;
     resetGameSelection();
-    getGameList();
+    getGameList();   
     resetGameMenu();
     resetLeaderboardLoadingContent();
   }

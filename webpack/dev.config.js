@@ -40,7 +40,9 @@ module.exports = {
 
     headers: { 'Access-Control-Allow-Origin': '*' },
     // proxy is required in order to make api calls to express server while using hot-reload webpack server
-    // routes api fetch requests from localhost:8080/api/* (webpack dev server) to localhost:3000/api/* (where our Express server is running)
+    // routes api fetch requests from localhost:8080/api/* (webpack dev server) to localhost:3000/api/* (where our Express server is running
+  
+
     proxy: {
       '/api/**': {
         target: 'http://localhost:3000/',
@@ -48,17 +50,17 @@ module.exports = {
       },
     },
   },
- /* devServer: {
-    compress: true,                                       // GZIP Compression
-    contentBase: path.resolve(__dirname, '../dist'),      // Serve static content from ../dist
-    historyApiFallback: true,                             // Redirect 404s back to /index.html
-    proxy: {
-      '/api': {                                           // Proxy requests to '8080/api' route
-        target: 'http://localhost:3000',                  // Proxy 8080 to 3000
-      },
-    },
-    port: 8080,                                           // Specify PORT for requests
-  }, */
+  // devServer: {
+  //   compress: true,                                       // GZIP Compression
+  //   contentBase: path.resolve(__dirname, '../dist'),      // Serve static content from ../dist
+  //   historyApiFallback: true,                             // Redirect 404s back to /index.html
+  //   proxy: {
+  //     '/api': {                                           // Proxy requests to '8080/api' route
+  //       target: 'http://localhost:3000',                  // Proxy 8080 to 3000
+  //     },
+  //   },
+  //   port: 8080,                                           // Specify PORT for requests
+  // },
   devtool: 'source-map',
   module: {
     rules: [
